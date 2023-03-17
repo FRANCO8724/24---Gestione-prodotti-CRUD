@@ -48,6 +48,25 @@ namespace _24___Gestione_prodotti_CRUD
         private void button2_Click(object sender, EventArgs e)
         {
             Elimina(p);
+
+            nome.Text = "";
+            nome.Focus();
+            prezzo.Text = "";
+            prezzo.Focus();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Modifica(p);
+            nome.Text = "";
+            nome.Focus();
+            prezzo.Text = "";
+            prezzo.Focus();
+
+            nuovonome.Text = "";
+            nuovonome.Focus();
+            nuovoprezzo.Text = "";
+            nuovoprezzo.Focus();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -93,6 +112,24 @@ namespace _24___Gestione_prodotti_CRUD
                 }
              }
         }
+
+        public void Modifica(prodotto[] pp)
+        {
+            for (int i = 0; i < dim; i++)
+            {
+                float a = float.Parse(nuovoprezzo.Text);
+
+                if (p[i].nome == nome.Text)
+                {
+                    p[i].nome = nuovonome.Text;
+
+                    p[i].prezzo = a;
+                }
+
+            }
+        }
+
+
 
     }
 }

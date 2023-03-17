@@ -36,8 +36,8 @@
             this.Aggiunt = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.nuovoprezzo = new System.Windows.Forms.TextBox();
+            this.nuovonome = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
@@ -116,20 +116,21 @@
             this.button3.TabIndex = 7;
             this.button3.Text = "Modifica prodotto";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // textBox3
+            // nuovoprezzo
             // 
-            this.textBox3.Location = new System.Drawing.Point(336, 187);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 8;
+            this.nuovoprezzo.Location = new System.Drawing.Point(336, 187);
+            this.nuovoprezzo.Name = "nuovoprezzo";
+            this.nuovoprezzo.Size = new System.Drawing.Size(100, 20);
+            this.nuovoprezzo.TabIndex = 8;
             // 
-            // textBox4
+            // nuovonome
             // 
-            this.textBox4.Location = new System.Drawing.Point(178, 187);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 9;
+            this.nuovonome.Location = new System.Drawing.Point(178, 187);
+            this.nuovonome.Name = "nuovonome";
+            this.nuovonome.Size = new System.Drawing.Size(100, 20);
+            this.nuovonome.TabIndex = 9;
             // 
             // label3
             // 
@@ -198,8 +199,8 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.nuovonome);
+            this.Controls.Add(this.nuovoprezzo);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.Aggiunt);
@@ -226,8 +227,8 @@
         private System.Windows.Forms.Button Aggiunt;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox nuovoprezzo;
+        private System.Windows.Forms.TextBox nuovonome;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button4;

@@ -33,7 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.prezzo = new System.Windows.Forms.TextBox();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.Aggiunta = new System.Windows.Forms.Button();
+            this.Aggiunt = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -86,16 +86,17 @@
             this.listView1.Size = new System.Drawing.Size(294, 415);
             this.listView1.TabIndex = 4;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.List;
             // 
-            // Aggiunta
+            // Aggiunt
             // 
-            this.Aggiunta.Location = new System.Drawing.Point(23, 95);
-            this.Aggiunta.Name = "Aggiunta";
-            this.Aggiunta.Size = new System.Drawing.Size(100, 23);
-            this.Aggiunta.TabIndex = 5;
-            this.Aggiunta.Text = "Aggiungi prodotto";
-            this.Aggiunta.UseVisualStyleBackColor = true;
-            this.Aggiunta.Click += new System.EventHandler(this.button1_Click);
+            this.Aggiunt.Location = new System.Drawing.Point(23, 95);
+            this.Aggiunt.Name = "Aggiunt";
+            this.Aggiunt.Size = new System.Drawing.Size(100, 23);
+            this.Aggiunt.TabIndex = 5;
+            this.Aggiunt.Text = "Aggiungi prodotto";
+            this.Aggiunt.UseVisualStyleBackColor = true;
+            this.Aggiunt.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -200,7 +201,7 @@
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.Aggiunta);
+            this.Controls.Add(this.Aggiunt);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.prezzo);
             this.Controls.Add(this.label2);
@@ -221,7 +222,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox prezzo;
         private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.Button Aggiunta;
+        private System.Windows.Forms.Button Aggiunt;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox3;

@@ -42,7 +42,7 @@ namespace _24___Gestione_prodotti_CRUD
 
         private void button7_Click(object sender, EventArgs e)
         {
-
+            visualizza(p);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -59,7 +59,19 @@ namespace _24___Gestione_prodotti_CRUD
             dim++;
         }
 
+        public string Scritta(prodotto p)
+        {
+            return "Nome:" + p.nome + " prezzo:" + p.prezzo.ToString();
+        }
 
+        public void visualizza(prodotto[] pp)
+        {
+            listView1.Items.Clear();
+            for (int i = 0; i < dim; i++)
+            {
+                listView1.Items.Add(Scritta(p[i]));
+            }
+        }
 
 
     }

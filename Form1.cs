@@ -45,6 +45,11 @@ namespace _24___Gestione_prodotti_CRUD
             visualizza(p);
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Elimina(p);
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -61,7 +66,7 @@ namespace _24___Gestione_prodotti_CRUD
 
         public string Scritta(prodotto p)
         {
-            return "Nome:" + p.nome + " prezzo:" + p.prezzo.ToString();
+            return "Nome: " + p.nome + " prezzo: " + p.prezzo.ToString() + " €";
         }
 
         public void visualizza(prodotto[] pp)
@@ -69,10 +74,25 @@ namespace _24___Gestione_prodotti_CRUD
             listView1.Items.Clear();
             for (int i = 0; i < dim; i++)
             {
+                if (pp[i].nome != null)
                 listView1.Items.Add(Scritta(p[i]));
             }
         }
 
+        public void Elimina(prodotto[] p)
+        {
+             for(int i = 0; i < dim;i++)
+             {
+                if(nome.Text == p[i].nome)
+                {
+                    for (int j = i; j < dim; j++)
+                    {
+                        p[j] = p[j + 1];
+                    }
+                     
+                }
+             }
+        }
 
     }
 }

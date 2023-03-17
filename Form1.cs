@@ -89,7 +89,11 @@ namespace _24___Gestione_prodotti_CRUD
 
         private void button6_Click(object sender, EventArgs e)
         {
+            listView1.Items.Clear();
 
+            float g = Piùbasso(p);
+
+            listView1.Items.Add("Prezzo pià alto: " + g);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -173,7 +177,34 @@ namespace _24___Gestione_prodotti_CRUD
             for (int i = 0; i < dim; i++)
             {
 
-                if (p[i].prezzo > p[i + 1].prezzo || p[i + 1].prezzo != 0)
+                if (p[i].prezzo > p[i + 1].prezzo)
+                {
+                    c = 1;
+                    a = p[i].prezzo;
+                }
+                else
+                {
+                    c = 0;
+                }
+
+                if (c == 1)
+                {
+                    break;
+                }
+
+            }
+            return a;
+        }
+
+        public float Piùbasso(prodotto[] pp)
+        {
+            float a = 0;
+            int c = 0;
+
+            for (int i = 0; i < dim; i++)
+            {
+
+                if (p[i].prezzo < p[i + 1].prezzo)
                 {
                     c = 1;
                     a = p[i].prezzo;
@@ -193,8 +224,8 @@ namespace _24___Gestione_prodotti_CRUD
         }
 
 
-            
-        }
+
+    }
 
 
     }

@@ -69,6 +69,15 @@ namespace _24___Gestione_prodotti_CRUD
             nuovoprezzo.Focus();
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            listView1.Items.Clear();
+
+            float g = Totale(p);
+
+            listView1.Items.Add("Prezzo complessivo: " + g);
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -129,6 +138,18 @@ namespace _24___Gestione_prodotti_CRUD
             }
         }
 
+        public float Totale(prodotto[] pp)
+        {
+            float a = 0;
+
+            for (int i = 0; i < dim; i++)
+            {
+                 a = a + p[i].prezzo;
+
+            }
+
+            return a;
+        }
 
 
     }

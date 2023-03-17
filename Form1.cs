@@ -27,10 +27,39 @@ namespace _24___Gestione_prodotti_CRUD
         }
 
 
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            Aggiunta(p);
+
+            nome.Text = "";
+            nome.Focus();
+            prezzo.Text = "";
+            prezzo.Focus();
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
+
+        //Funzioni di servizio
+
+        public void Aggiunta(prodotto[] pp)
+        {
+            p[dim].nome = nome.Text;
+            p[dim].prezzo = float.Parse(prezzo.Text);
+            dim++;
+        }
+
+
 
 
     }
